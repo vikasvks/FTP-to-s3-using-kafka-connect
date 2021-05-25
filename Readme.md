@@ -1,5 +1,6 @@
-# Streaming data from FTP to S3 using Kafka Connect in Docker</br>
-####(Streaming data from FTP to Kafka and kafka to S3 using Kafka Connect)
+# Streaming data from FTP to S3 using Kafka Connect in Docker
+<br>
+(Streaming data from FTP to Kafka and kafka to S3 using Kafka Connect)
 
 This uses Docker Compose to run the Kafka Connect worker and other kafka dependency.
 ### Prerequisites
@@ -97,8 +98,8 @@ curl -i -X PUT -H "Accept:application/json" \
 **Things to customise for your environment:**
 
 * `topics` :  the source topic(s) you want to send to S3
-* `key.converter` : match the serialisation of your source data (see https://www.confluent.io/blog/kafka-connect-deep-dive-converters-serialization-explained/[here])
-* `value.converter` : match the serialisation of your source data (see https://www.confluent.io/blog/kafka-connect-deep-dive-converters-serialization-explained/[here])
+* `key.converter` : match the serialisation of your source data (see https://www.confluent.io/blog/kafka-connect-deep-dive-converters-serialization-explained/)
+* `value.converter` : match the serialisation of your source data (see https://www.confluent.io/blog/kafka-connect-deep-dive-converters-serialization-explained/)
 * And many more
 
 
