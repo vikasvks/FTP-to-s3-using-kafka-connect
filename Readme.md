@@ -1,9 +1,10 @@
-# Streaming data from FTP to S3 using Kafka Connect in Docker
+# Data from FTP to S3 using Kafka Connect in Docker
 <br>
-(Streaming data from FTP to Kafka and kafka to S3 using Kafka Connect)
+(Data from FTP to Kafka and kafka to S3 using Kafka Connect)
 
 This uses Docker Compose to run the Kafka Connect worker and other kafka dependency.
 ### Prerequisites
+*In docker-compose.yml,I already added the both FTP source and s3 sink connectors (change version if you needed)*
 1. Install Docker (for kafka)
 2. Running FTP sever and its details `Hostname`,`username`,`password`and `port`
 3. Create the S3 bucket, make a note of the region
@@ -72,7 +73,7 @@ curl -i -X PUT -H "Accept:application/json" \
 *  For show connector list `SHOW CONNECTORS;`
 *  For show topics list `SHOW TOPICS;`
 *  For show connector list `PRINT "ftp-source-topic" FROM BEGINNING;`
-for more details of ksqldb (https://docs.ksqldb.io/en/latest/developer-guide/ksqldb-reference/create-connector/) 
+for more details of [ksqldb](https://docs.ksqldb.io/en/latest/developer-guide/ksqldb-reference/create-connector/) 
    
 6. Now we make s3 sink connector(Kafka topic to s3)
 
@@ -98,8 +99,8 @@ curl -i -X PUT -H "Accept:application/json" \
 **Things to customise for your environment:**
 
 * `topics` :  the source topic(s) you want to send to S3
-* `key.converter` : match the serialisation of your source data (see https://www.confluent.io/blog/kafka-connect-deep-dive-converters-serialization-explained/)
-* `value.converter` : match the serialisation of your source data (see https://www.confluent.io/blog/kafka-connect-deep-dive-converters-serialization-explained/)
+* `key.converter` : match the serialisation of your source data. [see]https://www.confluent.io/blog/kafka-connect-deep-dive-converters-serialization-explained/)
+* `value.converter` : match the serialisation of your source data. [see] https://www.confluent.io/blog/kafka-connect-deep-dive-converters-serialization-explained/)
 * And many more
 
 
