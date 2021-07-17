@@ -103,7 +103,7 @@ curl -i -X PUT -H "Accept:application/json" \
 * And many more
 
 
-7. Bravo 🎉🎉,All done now check data onto S3.
+7. Bravo 🎉🎉,All done now check data into S3.
 
 References
 
